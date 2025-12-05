@@ -20,11 +20,10 @@ inputs:
   scan-args:
     description: "Arguments to osv-scanner, separated by new line"
     default: |-
-      --skip-git
       --recursive
       ./
 runs:
   using: "docker"
-  image: "docker://ghcr.io/google/osv-scanner-action:v1.7.1"
+  image: "docker://ghcr.io/google/osv-scanner-action:v2.3.0"
   args:
     - ${{ inputs.scan-args }}
